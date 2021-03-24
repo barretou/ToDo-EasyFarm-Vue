@@ -1,0 +1,160 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    font-size: .98em;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    word-break: break-all;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background: #e6e359;
+    font-family: Helvetica;
+    width: 80%;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 5px;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    
+    
+}
+
+/*FOOTER*/
+
+#title{
+    font-size: 1.5rem;
+}
+
+#footer {
+    background-color: #288d60;
+    color: black;
+    text-align: center;
+    border-radius: 1.5rem; 
+    margin-top: 3rem;  
+    
+
+}
+.links-redes-sociais{
+    text-decoration: none;
+}
+
+.links-redes-sociais i{
+    color: black;
+    font-size: 25px;
+    padding: 6px;
+}
+
+.links-redes-sociais i:hover{
+    color: #e6e359
+}
+
+.copy small a{
+    text-decoration: none;
+    color: black;
+} 
+
+h2 {
+    font-weight: bold;
+    color: #288d60;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 2em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+del {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#delete:hover{
+    background-color: rgb(238, 56, 56);
+}
+
+button {
+    color: #fff;
+    background-color: #288d60;
+    border-radius: 1.8em;
+    padding: 0.4em 1em;
+    border: 2px solid #4fc08d;
+    transition: .2s;
+    cursor: pointer;
+}
+
+input[type=text] {
+    border-radius: 2em;
+    padding: 0.3em 1em;
+    border: 2px solid #4fc08d;
+    font-family: Helvetica;
+    max-width: 70%;
+}
+
+ol li {
+    transition: .2s;
+    border-radius: 2em;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ol li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ol li:hover {
+    background: #288d60;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #e6e359;
+    color: black;
+}
+
+label, img, li {
+    cursor: pointer;
+}
+
+ol {
+    list-style: decimal inside none;
+}
+
+
+@media screen and (min-width: 620px) {
+    * {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 1000px) {
+
+    input[type=text] {
+        width: 35%;
+    }
+
+    body {
+        width: 60%;
+    }
+}
+
+li > div {
+    display: flex;
+    align-items: center;
+}

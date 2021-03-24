@@ -1,0 +1,75 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List EasyFARM</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="app">
+        <header>
+            <h2>
+                <i class="fas fa-seedling fa-2x"></i>
+                EasyFARM ToDo List
+            </h2>
+            <form>
+                <input type="text" v-model="currentTodo" placeholder="tarefas a fazer" maxlength="500">
+                <button @click.prevent="adicionarTodo">Adicionar</button>
+            </form>
+        </header>
+
+        <section>
+            <ol>
+                <li v-for="todo in filteredTodos" :key="todo.text" v-on:click="toggleTodo(todo)">
+                    <div>
+                        <input type="checkbox" v-bind:checked="todo.done">
+
+                        <label>
+                            <del v-if="todo.done">
+                                {{ todo.text }}
+                            </del>
+                            <span v-else>
+                                {{ todo.text }}
+                            </span>
+                        </label>
+                    </div>
+                    <button id='delete' @click="deleteTodo(todo)" alt="fechar">Apagar</button>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <h3 id="title">Siga</h3>
+        <div class="links-redes-sociais">
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        </div>
+        <div class="copy">
+            <small><a href="https://www.easyfarm.io/software-para-fazenda-2x-mais-rapido/?utm_source=google&utm_medium=Search&utm_campaign=_institucional_easyfarm_&utm_term=easyfarm&utm_campaign=Institucional+com+Sitelinks&utm_source=adwords&utm_medium=ppc&hsa_acc=9125761953&hsa_cam=12447144927&hsa_grp=119265121878&hsa_ad=501729805897&hsa_src=g&hsa_tgt=aud-903554228092:kwd-519484409647&hsa_kw=easyfarm&hsa_mt=e&hsa_net=adwords&hsa_ver=3" target="_blank">
+        <i class="fas fa-seedling"></i><b>EasyFARM 2021</b>.All rigths reserved</a></small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
