@@ -1,3 +1,12 @@
+/*Definindo Variáveis para as cores mais usadas*/
+:root{
+    --amarelo: #e6e359;
+    --branco: rgb(255, 255, 255);
+    --verde-escuro: #288d60;
+    --verde-claro: #4fc08d;
+}
+
+/*configurações globais*/
 * {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
@@ -14,32 +23,112 @@
     outline: none;
 }
 
+/*corpo geral*/
 body {
-    background: #e6e359;
-    font-family: Helvetica;
+    background: var(--amarelo);
     width: 80%;
     margin: auto;
 }
 
+/*Estilizando Main e o Titulo principal*/
 main {
     display: flex;
     flex-direction: column;
     margin: 15px 5px;
     padding: 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 8px;
-    
-    
+    background: var(--branco);
+    border-radius: 8px;    
 }
 
-/*FOOTER*/
+
+
+h2 {
+    font-weight: bold;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 2em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+del {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+/*Botões*/
+button {
+    color: black;
+    background-color: var(--verde-claro);
+    border-radius: 1.8em;
+    padding: 0.4em 1em;
+    border: 2px solid var(--verde-claro);
+    transition: .2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--amarelo);
+    color: black;
+}
+
+#delete:hover{
+    background-color: rgb(238, 56, 56);
+    color: cornsilk;
+}
+
+/*input de tarefas*/
+input[type=text] {
+    border-radius: 2em;
+    padding: 0.3em 1em;
+    border: 2px solid var(--verde-claro);
+    font-family: Helvetica;
+    max-width: 70%;
+}
+
+/*Lista de tarefas*/
+
+ol li {
+    transition: .2s;
+    border-radius: 2em;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ol li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ol li:hover {
+    background: var(--verde-escuro);
+    color: #fff;
+}
+
+
+
+label, img, li {
+    cursor: pointer;
+}
+
+ol {
+    list-style: decimal inside none;
+}
+
+/*Footer Estilos*/
 
 #title{
     font-size: 1.5rem;
 }
 
 #footer {
-    background-color: #288d60;
+    background-color:var(--verde-claro);
     color: black;
     text-align: center;
     border-radius: 1.5rem; 
@@ -58,7 +147,7 @@ main {
 }
 
 .links-redes-sociais i:hover{
-    color: #e6e359
+    color: var(--amarelo)
 }
 
 .copy small a{
@@ -66,78 +155,7 @@ main {
     color: black;
 } 
 
-h2 {
-    font-weight: bold;
-    color: #288d60;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    font-size: 2em;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    justify-content: flex-start;
-}
-
-del {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-#delete:hover{
-    background-color: rgb(238, 56, 56);
-}
-
-button {
-    color: #fff;
-    background-color: #288d60;
-    border-radius: 1.8em;
-    padding: 0.4em 1em;
-    border: 2px solid #4fc08d;
-    transition: .2s;
-    cursor: pointer;
-}
-
-input[type=text] {
-    border-radius: 2em;
-    padding: 0.3em 1em;
-    border: 2px solid #4fc08d;
-    font-family: Helvetica;
-    max-width: 70%;
-}
-
-ol li {
-    transition: .2s;
-    border-radius: 2em;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-ol li:nth-child(odd) {
-    background: #f9f9f9;
-}
-
-ol li:hover {
-    background: #288d60;
-    color: #fff;
-}
-
-button:hover {
-    background-color: #e6e359;
-    color: black;
-}
-
-label, img, li {
-    cursor: pointer;
-}
-
-ol {
-    list-style: decimal inside none;
-}
-
-
+/*Adicionando breakpoints para responsividade*/
 @media screen and (min-width: 620px) {
     * {
         font-size: 1em;

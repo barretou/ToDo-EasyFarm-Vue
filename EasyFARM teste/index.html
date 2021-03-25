@@ -15,21 +15,22 @@
 <body>
 
     <main id="app">
-        <header>
+        <header> <!--Adicionando Ícone e Título-->
             <h2>
                 <i class="fas fa-seedling fa-2x"></i>
                 EasyFARM ToDo List
             </h2>
-            <form>
-                <input type="text" v-model="currentTodo" placeholder="tarefas a fazer" maxlength="500">
-                <button @click.prevent="adicionarTodo">Adicionar</button>
+            <form> <!--Adicionando Formulário e botão com evento 'click' disparado pelo botão-->
+                <input type="text" v-model="currentTodo" placeholder="Tarefas a fazer" maxlength="500"><!--o atributo v-model faz o biding bi-direcional para que o Vue decida o que fazer com o currentTodo-->
+                <button @click.prevent="adicionarTodo" v-if="addOrEdit === 'add'">Adicionar</button><!--Dispara o evento no click para acionar a função adicionarTodo-->
+                <button @click.prevent="updateTodo" v-if="addOrEdit === 'edit'">Atualizar</button><!--Dispara o evento no click para acionar a função updateTodo-->
             </form>
         </header>
 
         <section>
-            <ol>
-                <li v-for="todo in filteredTodos" :key="todo.text" v-on:click="toggleTodo(todo)">
-                    <div>
+            <ol><!--Cria-se uma lista ordenada para armaenar cada tarefa criada-->
+                <li v-for="todo in filteredTodos" :key="todo.text">
+                    <div v-on:click="toggleTodo(todo)">
                         <input type="checkbox" v-bind:checked="todo.done">
 
                         <label>
@@ -41,16 +42,18 @@
                             </span>
                         </label>
                     </div>
-                    <button id='delete' @click="deleteTodo(todo)" alt="fechar">Apagar</button>
+                    <div><!--Botões de editar e deletar acionando as funções editTodo e deleteTodo respectivamente-->
+                        <button id='editar' @click="editTodo(todo.id)" alt="editar">Editar</button>
+                        <button id='delete' @click="deleteTodo(todo)" alt="fechar">Apagar</button>
+                    </div>
                 </li>
             </ol>
         </section>
     </main>
 
-    <footer id="footer">
+    <footer id="footer"><!--Adição de um simples footer contendo as redes socias da empresa,site e copyright-->
         <h3 id="title">Siga</h3>
         <div class="links-redes-sociais">
-            </a>
             <a href="#" target="_blank">
                 <i class="fab fa-facebook-square"></i>
             </a>
@@ -67,9 +70,11 @@
         <i class="fas fa-seedling"></i><b>EasyFARM 2021</b>.All rigths reserved</a></small>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--Adicionand o VueJS via CDN-->
     <script src="main.js"></script>
 
 </body>
 
 </html>
+
+
