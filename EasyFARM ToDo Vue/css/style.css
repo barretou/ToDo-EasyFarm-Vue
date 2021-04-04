@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/*________________________Configurações Gerais da página_______________________________________*/
+:root {
+  --amarelo: #e6e359;
+  --branco: rgb(255, 255, 255);
+  --verde-escuro: #288d60;
+  --verde-claro: #4fc08d;
+}
+
+/*configurações globais*/
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 0;
+  font-size: 0.98em;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  word-break: break-all;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*corpo geral*/
+body {
+  background: var(--amarelo);
+  width: 80%;
+  margin: auto;
+}
+
+/*Estilizando Main e o Titulo principal*/
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 5px;
+  padding: 5px;
+  background: var(--branco);
+  border-radius: 8px;
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--verde-escuro);
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 2em;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: flex-start;
+}
+
+del {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*Botões*/
+button {
+  color: black;
+  background-color: var(--verde-claro);
+  border-radius: 1.8em;
+  padding: 0.4em 1em;
+  border: 2px solid var(--verde-claro);
+  transition: 0.2s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--amarelo);
+  color: black;
+}
+
+#delete:hover {
+  background-color: #ee3838;
+  color: cornsilk;
+}
+
+/*input de tarefas*/
+input[type=text] {
+  border-radius: 2em;
+  padding: 0.3em 1em;
+  border: 2px solid var(--verde-claro);
+  font-family: Helvetica;
+  max-width: 70%;
+}
+
+/*Lista de tarefas*/
+label, img, li {
+  cursor: pointer;
+}
+
+ol {
+  list-style: decimal inside none;
+}
+
+ol li {
+  transition: 0.2s;
+  border-radius: 2em;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ol li:nth-child(odd) {
+  background: #f9f9f9;
+}
+ol li:hover {
+  background: var(--verde-escuro);
+  color: #fff;
+}
+
+/*Footer Estilos*/
+#title {
+  font-size: 1.5rem;
+}
+
+.copy small a {
+  text-decoration: none;
+  color: black;
+}
+
+#footer {
+  background-color: var(--verde-claro);
+  color: black;
+  text-align: center;
+  border-radius: 1.5rem;
+  margin-top: 3rem;
+}
+
+.links-redes-sociais {
+  text-decoration: none;
+}
+.links-redes-sociais i {
+  color: black;
+  font-size: 25px;
+  padding: 6px;
+}
+.links-redes-sociais i:hover {
+  color: var(--amarelo);
+}
+
+/*Adicionando breakpoints para responsividade*/
+@media screen and (min-width: 620px) {
+  * {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  input[type=text] {
+    width: 35%;
+  }
+
+  body {
+    width: 60%;
+  }
+}
+li > div {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+/*Adicionando breakpoints para responsividade*/
+@media screen and (min-width: 620px) {
+    * {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 1000px) {
+
+    input[type=text] {
+        width: 35%;
+    }
+
+    body {
+        width: 60%;
+    }
+}
+
+li > div {
+    display: flex;
+    align-items: center;
+}

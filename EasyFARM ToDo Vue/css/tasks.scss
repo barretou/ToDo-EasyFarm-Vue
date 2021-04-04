@@ -1,0 +1,38 @@
+/*input de tarefas*/
+input[type=text] {
+    border-radius: 2em;
+    padding: 0.3em 1em;
+    border: 2px solid var(--verde-claro);
+    font-family: Helvetica;
+    max-width: 70%;
+}
+
+/*Lista de tarefas*/
+
+label, img, li {
+    cursor: pointer;
+}
+
+ol {
+    list-style: decimal inside none;
+}
+
+ol li {
+    transition: .2s;
+    border-radius: 2em;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+        &:nth-child(odd) {
+        background: #f9f9f9;
+        }
+
+        &:hover {
+        background: var(--verde-escuro);
+        color: #fff;
+        }
+}
+
+
