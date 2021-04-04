@@ -1,0 +1,34 @@
+/*Footer Estilos*/
+
+#title{
+    font-size: 1.5rem;
+}
+
+.copy small a{
+    text-decoration: none;
+    color: black;
+} 
+
+#footer {
+    background-color:var(--verde-claro);
+    color: black;
+    text-align: center;
+    border-radius: 1.5rem; 
+    margin-top: 3rem;  
+    
+
+}
+.links-redes-sociais{
+    text-decoration: none;
+
+        i {
+        color: black;
+        font-size: 25px;
+        padding: 6px;
+
+            &:hover{
+            color: var(--amarelo)
+            }
+        }
+}
+

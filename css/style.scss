@@ -1,0 +1,49 @@
+
+/*________________________Configurações Gerais da página_______________________________________*/
+
+:root{
+    --amarelo: #e6e359;
+    --branco: rgb(255, 255, 255);
+    --verde-escuro: #288d60;
+    --verde-claro: #4fc08d;
+}
+
+
+/*configurações globais*/
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    font-size: .98em;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    word-break: break-all;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+/*corpo geral*/
+body {
+    background: var(--amarelo);
+    width: 80%;
+    margin: auto;
+}
+
+@import 'main.scss';
+@import 'buttons.scss';
+@import 'tasks.scss';
+@import 'footer.scss';
+@import 'responsive.scss';
+
+
+
+
+
+
+
+
